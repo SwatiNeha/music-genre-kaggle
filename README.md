@@ -136,9 +136,6 @@ And in research and education, genre classification offers a benchmark problem f
 - **Interpretable enough** via **feature importance**; can add **SHAP** for local explanations if needed.  
 - **Efficient** (500 iters) and easy to deploy.
 
-> Notes on interpretability trade‑offs vs. KNN/Simple models are discussed in the report; SHAP/LIME can assist deployment
-explanations if required.
-
 ---
 
 ## Reproducibility
