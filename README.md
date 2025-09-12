@@ -6,7 +6,7 @@ are included where helpful (see `figures/`), and results are reported for both *
 
 ---
 
-## 📦 Data Overview
+## Data Overview
 
 - **Task**: Predict the **genre** (multi‑class) of a track from audio/meta features.
 - **Train/Test shape**: Provided by competition (Kaggle). See EDA for quality notes.
@@ -19,7 +19,7 @@ are included where helpful (see `figures/`), and results are reported for both *
 
 ---
 
-## 🔎 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 **Key patterns:**
 1) **Strong correlation:** `loudness` ↔ `energy` (≈ **0.81**) → redundant signal; remove one to reduce leakage/instability.  
@@ -38,7 +38,7 @@ are included where helpful (see `figures/`), and results are reported for both *
 
 ---
 
-## 🧼 Preprocessing & Feature Engineering
+## Preprocessing & Feature Engineering
 
 1) **Type & value fixes**
    - `time_signature`: parsed/encoded (e.g., “04‑Apr” → **4/4**, “03‑Apr” → **3/4**; unknown retained)
@@ -71,7 +71,7 @@ are included where helpful (see `figures/`), and results are reported for both *
 
 ---
 
-## 🤖 Models & Iterations
+## Models & Iterations
 
 **Baselines / classical**
 - **Logistic Regression** → ~**61.75%** validation.
@@ -116,7 +116,7 @@ are included where helpful (see `figures/`), and results are reported for both *
 
 ---
 
-## 🧭 Why CatBoost in the End?
+## Why CatBoost in the End?
 
 - **Top accuracy** on both validation and leaderboard.  
 - **Native categorical** support (no sparse blow‑ups from one‑hot).  
@@ -128,7 +128,20 @@ explanations if required.
 
 ---
 
-## 🧪 Reproducibility
+## Real-World Applications
+
+Music genre classification might begin as a Kaggle challenge, but it has clear real-world impact once taken outside the competition setting.
+
+In the streaming industry, platforms like Spotify or Apple Music could use such models to enrich their recommendation engines. By automatically tagging songs with genres, the system can curate personalized playlists and help users discover music they’d never have found otherwise. Playlists can even adapt in real time - from mellow acoustic tracks in the evening to high-energy pop for a workout.
+
+For the music industry and marketing, genre classifiers make it possible to automatically manage massive music catalogs without relying on inconsistent human metadata. Record labels and distributors can track trends in listener behavior across genres, informing marketing campaigns and release strategies.
+
+On the consumer side, apps can let users upload or record snippets and instantly identify the genre, recommending similar artists and tracks. Fitness and wellness apps could tap into the same models to sync playlists with activities, boosting engagement by matching the right sound to the right moment.
+
+And in research and education, genre classification offers a benchmark problem for teaching audio feature engineering and machine learning. More broadly, the same pipeline can be adapted to related domains such as speech emotion recognition, podcast tagging, or even anomaly detection in healthcare or industrial audio.
+---
+
+## Reproducibility
 
 - Set global **random seed** for NumPy / frameworks.  
 - Notebooks/scripts included to generate **figures** and **submissions**.  
