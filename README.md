@@ -5,6 +5,19 @@ This repository contains my end‑to‑end pipeline for a **music genre classifi
 are included where helpful (see `figures/`), and results are reported for both **validation** and **Kaggle leaderboard**.
 
 ---
+## Real-World Applications
+
+Music genre classification might begin as a Kaggle challenge, but it has clear real-world impact once taken outside the competition setting.
+
+In the streaming industry, platforms like Spotify or Apple Music could use such models to enrich their recommendation engines. By automatically tagging songs with genres, the system can curate personalized playlists and help users discover music they’d never have found otherwise. Playlists can even adapt in real time - from mellow acoustic tracks in the evening to high-energy pop for a workout.
+
+For the music industry and marketing, genre classifiers make it possible to automatically manage massive music catalogs without relying on inconsistent human metadata. Record labels and distributors can track trends in listener behavior across genres, informing marketing campaigns and release strategies.
+
+On the consumer side, apps can let users upload or record snippets and instantly identify the genre, recommending similar artists and tracks. Fitness and wellness apps could tap into the same models to sync playlists with activities, boosting engagement by matching the right sound to the right moment.
+
+And in research and education, genre classification offers a benchmark problem for teaching audio feature engineering and machine learning. More broadly, the same pipeline can be adapted to related domains such as speech emotion recognition, podcast tagging, or even anomaly detection in healthcare or industrial audio.
+
+---
 
 ## Data Overview
 
@@ -99,7 +112,7 @@ are included where helpful (see `figures/`), and results are reported for both *
 - Feature importances (CatBoost) → `figures/feature_importances_catboost.png`  
 ---
 
-## 📊 Results Summary
+## Results Summary
 
 | Group                  | Model                        | Val Acc. | Kaggle | Notes |
 |------------------------|------------------------------|:--------:|:------:|-------|
@@ -126,19 +139,6 @@ are included where helpful (see `figures/`), and results are reported for both *
 > Notes on interpretability trade‑offs vs. KNN/Simple models are discussed in the report; SHAP/LIME can assist deployment
 explanations if required.
 
----
-
-## Real-World Applications
-
-Music genre classification might begin as a Kaggle challenge, but it has clear real-world impact once taken outside the competition setting.
-
-In the streaming industry, platforms like Spotify or Apple Music could use such models to enrich their recommendation engines. By automatically tagging songs with genres, the system can curate personalized playlists and help users discover music they’d never have found otherwise. Playlists can even adapt in real time - from mellow acoustic tracks in the evening to high-energy pop for a workout.
-
-For the music industry and marketing, genre classifiers make it possible to automatically manage massive music catalogs without relying on inconsistent human metadata. Record labels and distributors can track trends in listener behavior across genres, informing marketing campaigns and release strategies.
-
-On the consumer side, apps can let users upload or record snippets and instantly identify the genre, recommending similar artists and tracks. Fitness and wellness apps could tap into the same models to sync playlists with activities, boosting engagement by matching the right sound to the right moment.
-
-And in research and education, genre classification offers a benchmark problem for teaching audio feature engineering and machine learning. More broadly, the same pipeline can be adapted to related domains such as speech emotion recognition, podcast tagging, or even anomaly detection in healthcare or industrial audio.
 ---
 
 ## Reproducibility
